@@ -14,4 +14,19 @@ module.exports = {
       directory: path.resolve(__dirname, "./dist"),
     },
   },
+
+  module: {
+    rules: [
+      {
+        test: /\.(js)x?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".jsx", ".js"],
+  },
 };
