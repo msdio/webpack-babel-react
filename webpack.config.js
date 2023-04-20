@@ -8,6 +8,10 @@ module.exports = {
     filename: "bundle.js",
   },
   //index.js 파일을 가져와서, dist/bundle.js 라는 파일에 결과물을 만든다.
+  performance: {
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
 
   devServer: {
     static: {
